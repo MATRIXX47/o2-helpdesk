@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://o2helpdesk.co.uk/sitemap.xml
-
-# Disallow admin areas (if any in future)
-# Disallow: /admin/
-# Disallow: /private/
+Sitemap: https://02helpdesk.co.uk/sitemap.xml
