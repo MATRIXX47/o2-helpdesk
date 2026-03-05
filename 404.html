@@ -4,125 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | O2 Helpdesk UK</title>
-    <meta name="description" content="Sorry, we couldn't find the page you're looking for. Get O2 support at O2 Helpdesk UK.">
+    <meta name="description" content="The page you're looking for could not be found. Visit O2 Helpdesk UK for help with billing, technical support, and upgrades. Call 01202 925102.">
+    <link rel="canonical" href="https://02helpdesk.co.uk/404.html">
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#0019A5">
-    <link rel="canonical" href="https://o2helpdesk.co.uk/404.html">
+    <meta property="og:title" content="Page Not Found | O2 Helpdesk UK">
+    <meta property="og:description" content="The page you're looking for could not be found. Visit O2 Helpdesk UK for help.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://02helpdesk.co.uk/404.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Page Not Found | O2 Helpdesk UK">
+    <meta name="twitter:description" content="The page you're looking for could not be found. Visit O2 Helpdesk UK for help.">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .error-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0019A5 0%, #0050FF 50%, #00BFFF 100%);
-            padding: 120px 20px 40px;
-            text-align: center;
-        }
-        .error-container {
-            max-width: 600px;
-            color: white;
-        }
-        .error-code {
-            font-size: clamp(6rem, 15vw, 12rem);
-            font-weight: 800;
-            line-height: 1;
-            opacity: 0.3;
-            margin-bottom: 0;
-        }
-        .error-title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            margin-bottom: 1rem;
-        }
-        .error-message {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        .error-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .error-cta {
-            background: white;
-            color: #0019A5;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .error-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        .error-cta.secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-        }
-        .error-help {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        .error-help h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .error-links {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .error-links a {
-            color: white;
-            opacity: 0.8;
-            text-decoration: underline;
-        }
-        .error-links a:hover {
-            opacity: 1;
-        }
-    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="header-container">
-            <a href="/" class="logo">
-                <div class="logo-icon">O2</div>
-                <span>Helpdesk UK</span>
-            </a>
+            <a href="/" class="logo"><div class="logo-icon">O2</div><span>Helpdesk UK</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link">About Us</a>
+                <a href="/billing.html" class="nav-link">Billing</a>
+                <a href="/support.html" class="nav-link">Technical</a>
+                <a href="/upgrade.html" class="nav-link">Upgrades</a>
+                <a href="/faq.html" class="nav-link">FAQ</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <a href="tel:01202925102" class="header-cta">Call Now: 01202 925102</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
-    
-    <main>
-        <section class="error-section">
-            <div class="error-container">
-                <p class="error-code">404</p>
-                <h1 class="error-title">Page Not Found</h1>
-                <p class="error-message">Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you may have typed the URL incorrectly.</p>
-                
-                <div class="error-actions">
-                    <a href="/" class="error-cta">Go to Homepage</a>
-                    <a href="tel:01202925102" class="error-cta secondary">📞 Call Support</a>
+
+    <main id="main-content">
+        <section class="hero-section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="container">
+                <h1>Page Not Found</h1>
+                <p style="font-size: 1.2rem; margin: 1rem 0 2rem; color: #666;">Sorry, the page you're looking for doesn't exist or has been moved.</p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Need help with O2? We're here for you.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="/" class="cta-button">Go to Homepage</a>
+                    <a href="tel:01202925102" class="cta-button">Call 01202 925102</a>
                 </div>
-                
-                <div class="error-help">
-                    <h3>Popular Pages</h3>
-                    <ul class="error-links">
-                        <li><a href="/billing.html">Billing Support</a></li>
-                        <li><a href="/support.html">Technical Support</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/contact.html">Contact Us</a></li>
-                    </ul>
+                <div style="margin-top: 3rem;">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Popular Pages</h2>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/billing.html" class="nav-link" style="padding: 0.5rem 1rem;">Billing Support</a>
+                        <a href="/support.html" class="nav-link" style="padding: 0.5rem 1rem;">Technical Support</a>
+                        <a href="/upgrade.html" class="nav-link" style="padding: 0.5rem 1rem;">Upgrades</a>
+                        <a href="/faq.html" class="nav-link" style="padding: 0.5rem 1rem;">FAQ</a>
+                        <a href="/contact.html" class="nav-link" style="padding: 0.5rem 1rem;">Contact Us</a>
+                        <a href="/blog/" class="nav-link" style="padding: 0.5rem 1rem;">Blog</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo"><div class="logo-icon">O2</div><span>Helpdesk UK</span></div>
+                    <p>Independent O2 support specialists providing fast, reliable help with all O2 services.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <a href="/billing.html">Billing Support</a>
+                    <a href="/support.html">Technical Support</a>
+                    <a href="/upgrade.html">Upgrade Advice</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="/about.html">About Us</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Phone: <a href="tel:01202925102">01202 925102</a></p>
+                    <p>Email: <a href="mailto:support@02helpdesk.co.uk">support@02helpdesk.co.uk</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 O2 Helpdesk UK. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="/privacy-policy.html">Privacy Policy</a>
+                    <a href="/terms-conditions.html">Terms & Conditions</a>
+                    <a href="/cookie-policy.html">Cookie Policy</a>
+                </div>
+                <p class="disclaimer">O2 Helpdesk UK is an independent support service and is not affiliated with, endorsed by, or connected to O2, Telefonica UK Limited, or Virgin Media O2. All trademarks belong to their respective owners.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
