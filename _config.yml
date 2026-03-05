@@ -5,7 +5,7 @@
 title: "O2 Helpdesk UK"
 description: "Independent O2 customer support service"
 baseurl: ""
-url: "https://o2helpdesk.co.uk"
+url: "https://02helpdesk.co.uk"
 
 # Build settings
 markdown: kramdown
