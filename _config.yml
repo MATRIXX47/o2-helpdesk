@@ -1,0 +1,32 @@
+# GitHub Pages Configuration
+# Disable Jekyll processing since this is a static HTML site
+
+# Site settings
+title: "O2 Helpdesk UK"
+description: "Independent O2 customer support service"
+baseurl: ""
+url: "https://o2helpdesk.co.uk"
+
+# Build settings
+markdown: kramdown
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - adsense_approval_report.md
+  - O2_Helpdesk_SEO_Strategy.md
+  - quick_checklist.md
+  - .gitignore
+  - .github/
+
+# Include hidden files
+include:
+  - _headers
+  - .nojekyll
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+
+# Permalink structure
+permalink: pretty
