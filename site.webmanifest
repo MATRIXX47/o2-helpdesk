@@ -1,0 +1,30 @@
+{
+  "name": "O2 Helpdesk UK - Independent O2 Support",
+  "short_name": "O2 Helpdesk",
+  "description": "Get instant help with O2 billing, technical issues, upgrades & more. Independent O2 support with under 60-second answer time.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0019A5",
+  "theme_color": "#0019A5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "lang": "en-GB",
+  "dir": "ltr"
+}
