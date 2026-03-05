@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O2 APN Settings: Complete Configuration Guide | O2 Helpdesk UK</title>
+    <meta name="description" content="Correct APN settings for O2 mobile data. Step-by-step instructions for iPhone and Android devices to fix data connectivity issues.">
+    <link rel="canonical" href="https://www.o2helpdesk.co.uk/blog/o2-apn-settings.html">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="logo"><div class="logo-icon">O2</div><span>Helpdesk UK</span></a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link">About Us</a>
+                <a href="/billing.html" class="nav-link">Billing Support</a>
+                <a href="/support.html" class="nav-link">Technical Support</a>
+                <a href="/upgrade.html" class="nav-link">Upgrades</a>
+                <a href="/faq.html" class="nav-link">FAQ</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="/blog/" class="nav-link active">Blog</a>
+            </nav>
+            <div class="header-cta">
+                <a href="tel:01202925102" class="phone-link"><span>📞</span> 01202 925102</a>
+                <a href="tel:01202925102" class="btn btn-primary">Call Now</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <section class="article-header">
+            <div class="section-container">
+                <h1>O2 APN Settings: Complete Configuration Guide</h1>
+                <div class="article-meta">
+                    <span>📅 December 28, 2024</span>
+                    <span>🏷️ Technical</span>
+                    <span>⏱️ 10 min read</span>
+                </div>
+            </div>
+        </section>
+        
+        <article class="article-content">
+            <div class="content-wrapper">
+                <p>If you're experiencing mobile data issues with your O2 phone, incorrect APN (Access Point Name) settings could be the culprit. This comprehensive guide provides the correct O2 APN settings and step-by-step instructions for configuring them on your device.</p>
+                
+                <h2>What is an APN?</h2>
+                <p>An Access Point Name (APN) is the gateway between your mobile network and the internet. It tells your phone how to connect to O2's data network. Without the correct APN settings, your mobile data won't work properly—or at all.</p>
+                
+                <h2>Correct O2 APN Settings</h2>
+                <p>Here are the official O2 APN settings you need:</p>
+                
+                <table class="content-table">
+                    <thead>
+                        <tr><th>Setting</th><th>Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Name</strong></td><td>O2 Internet</td></tr>
+                        <tr><td><strong>APN</strong></td><td>mobile.o2.co.uk</td></tr>
+                        <tr><td><strong>Username</strong></td><td>o2web</td></tr>
+                        <tr><td><strong>Password</strong></td><td>password</td></tr>
+                        <tr><td><strong>MMSC</strong></td><td>http://mmsc.mms.o2.co.uk:8002</td></tr>
+                        <tr><td><strong>MMS Proxy</strong></td><td>82.132.254.1</td></tr>
+                        <tr><td><strong>MMS Port</strong></td><td>8080</td></tr>
+                        <tr><td><strong>APN Type</strong></td><td>default,mms,supl</td></tr>
+                        <tr><td><strong>APN Protocol</strong></td><td>IPv4</td></tr>
+                    </tbody>
+                </table>
+                
+                <h2>How to Configure APN Settings on Android</h2>
+                
+                <h3>Step-by-Step Instructions</h3>
+                <ol>
+                    <li>Open <strong>Settings</strong> on your Android phone</li>
+                    <li>Tap <strong>Network & Internet</strong> (or <strong>Connections</strong> on Samsung)</li>
+                    <li>Tap <strong>Mobile Network</strong> (or <strong>Mobile Networks</strong>)</li>
+                    <li>Tap <strong>Access Point Names</strong> or <strong>APNs</strong></li>
+                    <li>Tap the <strong>+</strong> icon (or menu button) to add a new APN</li>
+                    <li>Enter the O2 APN settings from the table above</li>
+                    <li>Tap <strong>Save</strong></li>
+                    <li>Select the new O2 APN as your active APN</li>
+                    <li>Restart your phone</li>
+                </ol>
+                
+                <div class="tip-box">
+                    <strong>Samsung Tip:</strong> On Samsung devices, the path may be: Settings > Connections > Mobile Networks > Access Point Names
+                </div>
+                
+                <h2>How to Configure APN Settings on iPhone</h2>
+                
+                <h3>Step-by-Step Instructions</h3>
+                <ol>
+                    <li>Open <strong>Settings</strong> on your iPhone</li>
+                    <li>Tap <strong>Mobile Data</strong> (or <strong>Cellular</strong>)</li>
+                    <li>Tap <strong>Mobile Data Network</strong> (or <strong>Cellular Data Network</strong>)</li>
+                    <li>Under <strong>Mobile Data</strong> section, enter:
+                        <ul>
+                            <li>APN: <strong>mobile.o2.co.uk</strong></li>
+                            <li>Username: <strong>o2web</strong></li>
+                            <li>Password: <strong>password</strong></li>
+                        </ul>
+                    </li>
+                    <li>Under <strong>MMS</strong> section, enter:
+                        <ul>
+                            <li>APN: <strong>mobile.o2.co.uk</strong></li>
+                            <li>Username: <strong>o2web</strong></li>
+                            <li>Password: <strong>password</strong></li>
+                            <li>MMSC: <strong>http://mmsc.mms.o2.co.uk:8002</strong></li>
+                            <li>MMS Proxy: <strong>82.132.254.1:8080</strong></li>
+                        </ul>
+                    </li>
+                    <li>Press the <strong>Home</strong> button or swipe up to exit</li>
+                    <li>Restart your iPhone</li>
+                </ol>
+                
+                <h2>When to Reset Your APN Settings</h2>
+                <p>You should check or reset your APN settings if you're experiencing:</p>
+                <ul>
+                    <li>Mobile data not working despite having signal</li>
+                    <li>Slow data speeds</li>
+                    <li>Unable to send or receive MMS messages</li>
+                    <li>Data works on Wi-Fi but not on mobile network</li>
+                    <li>Recently switched to O2 from another network</li>
+                </ul>
+                
+                <h2>How to Reset APN to Default</h2>
+                
+                <h3>Android</h3>
+                <ol>
+                    <li>Go to Settings > Network & Internet > Mobile Network > Access Point Names</li>
+                    <li>Tap the menu button (three dots)</li>
+                    <li>Select <strong>Reset to default</strong></li>
+                    <li>Restart your phone</li>
+                </ol>
+                
+                <h3>iPhone</h3>
+                <p>iPhone doesn't have a direct "reset APN" option. To reset:</p>
+                <ol>
+                    <li>Go to Settings > General > Transfer or Reset iPhone</li>
+                    <li>Tap <strong>Reset</strong></li>
+                    <li>Select <strong>Reset Network Settings</strong></li>
+                    <li>Enter your passcode if prompted</li>
+                    <li>Confirm the reset</li>
+                    <li>Your iPhone will restart with default network settings</li>
+                </ol>
+                
+                <div class="warning-box">
+                    <strong>Warning:</strong> Resetting network settings will also remove all saved Wi-Fi passwords and Bluetooth pairings. Make sure you have your Wi-Fi password handy.
+                </div>
+                
+                <h2>Troubleshooting APN Issues</h2>
+                
+                <h3>Data Still Not Working After APN Configuration</h3>
+                <p>If you've entered the correct APN settings but mobile data still doesn't work:</p>
+                <ol>
+                    <li>Double-check all settings are entered correctly (typos are common)</li>
+                    <li>Ensure mobile data is enabled in your phone settings</li>
+                    <li>Check you haven't exceeded your data allowance</li>
+                    <li>Try toggling Airplane Mode on and off</li>
+                    <li>Restart your phone</li>
+                    <li>Contact O2 to verify there are no account issues</li>
+                </ol>
+                
+                <div class="cta-box">
+                    <h3>Still Having Data Issues?</h3>
+                    <p>Our technical support team can help diagnose APN problems and guide you through advanced troubleshooting steps.</p>
+                    <p class="phone-number"><a href="tel:01202925102">📞 01202 925102</a></p>
+                </div>
+            </div>
+        </article>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column"><h4>Services</h4><ul><li><a href="/billing.html">Billing Support</a></li><li><a href="/support.html">Technical Support</a></li><li><a href="/upgrade.html">Upgrade Advice</a></li><li><a href="/contact.html">Complaint Resolution</a></li></ul></div>
+                <div class="footer-column"><h4>Company</h4><ul><li><a href="/about.html">About Us</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/faq.html">FAQ</a></li></ul></div>
+                <div class="footer-column"><h4>Legal</h4><ul><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-conditions.html">Terms & Conditions</a></li><li><a href="/cookie-policy.html">Cookie Policy</a></li></ul></div>
+                <div class="footer-column"><h4>Contact</h4><ul><li>📞 <a href="tel:01202925102">01202 925102</a></li><li>✉️ <a href="mailto:support@o2helpdesk.co.uk">support@o2helpdesk.co.uk</a></li></ul></div>
+            </div>
+            <div class="footer-disclaimer"><p><strong>Disclaimer:</strong> O2 Helpdesk UK is an independent support service and is not affiliated with O2.</p></div>
+            <div class="footer-bottom"><p class="footer-copyright">© 2025 O2 Helpdesk UK. All rights reserved.</p></div>
+        </div>
+    </footer>
+    
+    <div class="cookie-consent"><div class="cookie-container"><p class="cookie-text">We use cookies to improve your experience. <a href="/cookie-policy.html">Cookie Policy</a>.</p><button class="btn btn-primary cookie-accept">Accept</button></div></div>
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="../main.js"></script>
+</body>
+</html>

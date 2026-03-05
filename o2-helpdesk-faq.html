@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O2 Helpdesk FAQ | Frequently Asked Questions & Support | 01202 925102</title>
+    <meta name="description" content="Find answers to all your O2 questions. Browse our comprehensive FAQ covering billing, technical support, upgrades, account management & more. Call 01202 925102 for personalised help.">
+    <style>
+        :root {
+            --o2-blue: #0055a5;
+            --o2-light-blue: #0077cc;
+            --o2-dark-blue: #003d7a;
+            --o2-teal: #00a0b0;
+            --o2-grey: #f5f5f5;
+            --o2-dark-grey: #333333;
+            --o2-white: #ffffff;
+            --o2-border: #e0e0e0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--o2-dark-grey);
+            background-color: var(--o2-white);
+        }
+        
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--o2-blue) 0%, var(--o2-teal) 100%);
+            color: var(--o2-white);
+            border-radius: 12px;
+        }
+        
+        .faq-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .faq-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+        
+        .phone-cta {
+            display: inline-block;
+            background: var(--o2-white);
+            color: var(--o2-blue);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .faq-categories {
+            display: grid;
+            gap: 40px;
+        }
+        
+        .faq-category {
+            background: var(--o2-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        .category-header {
+            background: var(--o2-blue);
+            color: var(--o2-white);
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .category-icon {
+            font-size: 1.8rem;
+        }
+        
+        .category-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .faq-list {
+            padding: 10px;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--o2-border);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 20px 25px;
+            background: var(--o2-white);
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--o2-dark-grey);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: var(--o2-grey);
+            color: var(--o2-blue);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--o2-blue);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 25px 25px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .faq-answer-content p {
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer-content ul, .faq-answer-content ol {
+            margin: 15px 0 15px 25px;
+        }
+        
+        .faq-answer-content li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d4edfc 100%);
+            border-left: 4px solid var(--o2-blue);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .phone-highlight {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .phone-highlight a {
+            color: var(--o2-blue);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .quick-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--o2-blue);
+            color: var(--o2-white);
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .quick-link:hover {
+            background: var(--o2-dark-blue);
+            transform: translateY(-2px);
+        }
+        
+        .faq-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: var(--o2-grey);
+            border-radius: 12px;
+        }
+        
+        .faq-footer h3 {
+            font-size: 1.8rem;
+            color: var(--o2-blue);
+            margin-bottom: 15px;
+        }
+        
+        .faq-footer p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--o2-blue);
+            color: var(--o2-white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: var(--o2-dark-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,85,165,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .faq-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+                padding: 15px 20px;
+            }
+            
+            .faq-answer-content {
+                padding: 0 20px 20px;
+            }
+            
+            .category-header {
+                padding: 20px;
+            }
+            
+            .category-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="faq-container">
+        <header class="faq-header">
+            <h1>O2 Helpdesk Frequently Asked Questions</h1>
+            <p>Find comprehensive answers to all your O2-related queries. Our expert team has compiled the most common questions to help you get the support you need quickly and efficiently.</p>
+            <a href="tel:01202925102" class="phone-cta">📞 Call 01202 925102</a>
+        </header>
+
+        <div class="faq-categories">
+            
+            <!-- CATEGORY 1: GENERAL QUESTIONS -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">📋</span>
+                    <h2>General Questions</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What services does the O2 Helpdesk provide?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>The O2 Helpdesk offers comprehensive support for all O2 mobile services and products. Our dedicated team assists with account management, billing enquiries, technical troubleshooting, device upgrades, network issues, and general customer service queries. Whether you're experiencing signal problems, need help understanding your bill, or want to explore upgrade options, we're here to help.</p>
+                                <p>We pride ourselves on delivering personalised support tailored to your specific needs. Our knowledgeable advisors can guide you through complex issues, explain your tariff options, help set up new devices, and ensure you're getting the most from your O2 services. We also provide support for O2 Priority, O2 Rewards, and other exclusive benefits available to O2 customers.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need immediate assistance?</strong> Call us now on <a href="tel:01202925102">01202 925102</a> for expert help.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I check my O2 account balance and allowances?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Checking your O2 account balance and allowances is straightforward and can be done through multiple convenient methods. The quickest way is via the My O2 app, available for free download on iOS and Android devices. Once logged in, you'll see your current balance, remaining minutes, texts, and data allowance at a glance.</p>
+                                <p>Alternatively, you can check your balance by:</p>
+                                <ul>
+                                    <li>Dialling *#10# from your O2 mobile for an instant balance update</li>
+                                    <li>Logging into your account at o2.co.uk/my-o2</li>
+                                    <li>Texting "BALANCE" to 20202 for a text response</li>
+                                    <li>Calling our automated service on 4444 from your O2 phone</li>
+                                </ul>
+                                <p>Your allowances typically reset on your bill date each month. If you're running low on data or minutes, we can help you find the best bolt-on or tariff upgrade to suit your usage patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What are O2's opening hours for customer support?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>The O2 Helpdesk is available to assist you during extended hours to ensure you receive support when you need it most. Our telephone support lines are open Monday to Friday from 8:00 AM to 9:00 PM, Saturday from 8:00 AM to 8:00 PM, and Sunday from 9:00 AM to 6:00 PM. Bank holiday hours may vary, so we recommend checking our website for specific dates.</p>
+                                <p>For urgent technical issues or network problems, we offer 24/7 automated support services and online troubleshooting guides. The My O2 app and online account portal are available around the clock for self-service options including bill viewing, allowance checking, and basic account management.</p>
+                                <p>During peak times, you may experience slightly longer wait times. We recommend calling early in the morning or later in the evening for the shortest queues. For complex enquiries that require detailed attention, our advisors are best equipped to help during weekday business hours.</p>
+                                <div class="phone-highlight">
+                                    <strong>Speak to an advisor today:</strong> <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How can I find my nearest O2 store?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Finding your nearest O2 store is simple using our online store locator tool. Visit o2.co.uk/storelocator and enter your postcode, town, or city name to see a list of nearby stores complete with addresses, contact numbers, opening hours, and available services. You can also view stores on an interactive map to find the most convenient location.</p>
+                                <p>O2 stores offer a range of services including new contract sign-ups, device purchases, technical support, bill payments, and account management. Many stores also provide O2 Guru sessions where you can receive free personalised help with your device, learn about new features, or get advice on staying safe online.</p>
+                                <p>Before visiting, we recommend checking the specific store's opening hours and booking an appointment for complex issues to ensure you receive dedicated attention. Some services may require you to bring identification and proof of address, particularly for new contracts or account changes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What is O2 Priority and how do I access it?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 Priority is our exclusive rewards programme that gives O2 customers access to fantastic perks, discounts, and experiences. As an O2 customer, you can enjoy priority ticket access for thousands of live events and gigs up to 48 hours before general release, exclusive high street offers and discounts from popular brands, free treats every week from high street favourites, and prize draws for money-can't-buy experiences.</p>
+                                <p>To access O2 Priority, simply download the Priority app from the App Store or Google Play Store and log in using your My O2 account details. If you haven't registered for My O2 yet, you can do so quickly on the O2 website using your mobile number. Once logged in, you'll have instant access to all current offers and can set up notifications for your favourite types of deals.</p>
+                                <p>Popular Priority offers have limited availability and are offered on a first-come, first-served basis, so we recommend checking the app regularly. Many customers save hundreds of pounds each year through Priority offers alone, making it one of the most valuable benefits of being with O2.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Can I use my O2 phone abroad, and what are the charges?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 offers excellent roaming options for customers travelling abroad. Within our Europe Zone, which includes most EU countries, you can use your UK allowance of minutes, texts, and data at no extra cost on most tariffs. This means you can call and text UK numbers and use your data allowance just as you would at home.</p>
+                                <p>For destinations outside the Europe Zone, O2 Travel offers great value with a daily charge that gives you unlimited data, plus reduced rates for calls and texts. The daily charge only applies on days you actually use your phone abroad, so you're not paying for days when your device is switched off or in flight mode.</p>
+                                <p>Before travelling, we recommend checking the specific roaming rates for your destination by visiting o2.co.uk/international or contacting us. You should also ensure roaming is enabled on your account, which can be done through the My O2 app or by calling our team. Some premium numbers and special services may incur additional charges even within the Europe Zone.</p>
+                                <div class="phone-highlight">
+                                    <strong>Planning a trip?</strong> Call <a href="tel:01202925102">01202 925102</a> to discuss the best roaming options for your destination.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CATEGORY 2: BILLING & PAYMENTS -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">💳</span>
+                    <h2>Billing & Payments</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">How do I view and download my O2 bill?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Accessing your O2 bill is quick and convenient through multiple channels. The easiest method is via the My O2 app, where you can view your current bill, check previous bills for up to 12 months, and download PDF copies for your records. Simply open the app, tap on "Bills" and you'll see a clear breakdown of your charges.</p>
+                                <p>You can also access your bills online by visiting o2.co.uk/my-o2 and logging into your account. The online portal provides detailed billing information including itemised call lists, data usage breakdowns, and any additional charges. You can set up paperless billing to receive email notifications when your new bill is ready, helping reduce environmental impact while keeping your records organised.</p>
+                                <p>If you need bills older than 12 months or require a detailed breakdown for business or tax purposes, our customer service team can assist. We recommend registering for online billing to ensure you never miss a payment and always have access to your billing history.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What payment methods does O2 accept?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 offers a variety of payment methods to suit your preferences and ensure paying your bill is as convenient as possible. For monthly contract customers, Direct Debit is the most popular option, allowing automatic payment from your bank account on your chosen date. You can set up Direct Debit through the My O2 app, online account, or by speaking with our team.</p>
+                                <p>Other accepted payment methods include:</p>
+                                <ul>
+                                    <li><strong>Debit/Credit Card:</strong> Pay online, via the app, or over the phone using Visa, Mastercard, or American Express</li>
+                                    <li><strong>Bank Transfer:</strong> Use the bank details provided on your bill to make a transfer directly from your account</li>
+                                    <li><strong>PayPoint:</strong> Visit any PayPoint location with your bill to make a cash payment</li>
+                                    <li><strong>Cheque:</strong> Send a cheque payable to O2 to the address on your bill (allow 5-7 working days)</li>
+                                </ul>
+                                <p>For Pay As You Go customers, top-ups can be made via the app, online, at any O2 store, or using vouchers available at thousands of retail locations across the UK.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Why is my bill higher than usual this month?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you've noticed your bill is higher than expected, there are several common reasons this might occur. The first step is to check your bill details through the My O2 app or online account, where you'll find a complete breakdown of all charges. Look for any out-of-allowance usage such as extra data, international calls, premium rate numbers, or roaming charges.</p>
+                                <p>Other reasons for increased bills may include:</p>
+                                <ul>
+                                    <li>One-off charges for device insurance, accessories, or early upgrade fees</li>
+                                    <li>Prorated charges if you've recently changed your tariff or added a new line</li>
+                                    <li>Charges for value-added services like O2 Travel, extra data bolt-ons, or family plan additions</li>
+                                    <li>Third-party charges from services accessed through your phone</li>
+                                </ul>
+                                <p>If you believe there's an error on your bill or you'd like help understanding specific charges, our billing specialists can review your account in detail. We can also help you find ways to reduce future bills by analysing your usage patterns and recommending more suitable tariffs or bolt-ons.</p>
+                                <div class="phone-highlight">
+                                    <strong>Questions about your bill?</strong> Our team can help explain every charge. Call <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I set up or change my Direct Debit details?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Setting up or amending your Direct Debit is straightforward and can be completed in minutes. The easiest method is through the My O2 app: simply log in, navigate to "Payment Settings" and select "Manage Direct Debit." From here you can set up a new Direct Debit, change your bank account details, or adjust your payment date to better suit your financial schedule.</p>
+                                <p>You can also manage your Direct Debit through your online account at o2.co.uk/my-o2 or by calling our customer service team. When setting up a new Direct Debit, you'll need your bank account number and sort code handy. Changes typically take 10 working days to process, so please ensure you have alternative payment arrangements if a bill is due during this transition period.</p>
+                                <p>O2 offers flexible payment dates, allowing you to choose a date between the 1st and 28th of each month. Many customers prefer to align their O2 payment date with their salary payment date for easier budgeting. If you experience any issues with your Direct Debit payment, we'll notify you promptly and can help arrange an alternative payment method to keep your account in good standing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What happens if I miss a payment?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you miss a payment, we understand that circumstances can change, and we're here to help you get back on track. Initially, we'll send you a reminder notification via text and email if we haven't received your payment by the due date. Your service will typically continue for a short grace period to give you time to make the payment.</p>
+                                <p>If the payment remains outstanding, your service may be restricted, meaning you won't be able to make calls, send texts, or use mobile data. However, you'll still be able to receive calls and access emergency services. A late payment fee may also be applied to your account, and missed payments can affect your credit rating.</p>
+                                <p>If you're experiencing financial difficulties, we strongly encourage you to contact us as soon as possible. Our dedicated support team can discuss payment plan options, temporary payment arrangements, or tariff adjustments to help make your payments more manageable. We have various support schemes available and are committed to finding solutions that work for your situation.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need help with payments?</strong> Speak to our understanding team on <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Can I get a VAT invoice for my business?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, O2 provides VAT invoices for all business customers and personal customers who require them for expense claims or tax purposes. Your monthly bill automatically includes a VAT breakdown showing the net amount, VAT charged at the current rate, and the total gross amount payable. This information is displayed clearly on both paper and electronic bills.</p>
+                                <p>For business account holders, we offer enhanced billing options including consolidated invoices for multiple lines, cost centre allocation, and detailed usage reports. These can be customised to meet your company's accounting requirements and can be delivered electronically or by post according to your preference.</p>
+                                <p>If you need a duplicate VAT invoice, a VAT receipt for a specific transaction, or have questions about the VAT treatment of your charges, our business support team can assist. Please note that some promotional offers and discounts may affect the VAT calculation, and we'll ensure you receive accurate documentation for all your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I dispute a charge on my bill?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you believe there's an incorrect charge on your bill, we want to resolve it quickly and fairly. Start by reviewing your bill details through the My O2 app or online account to understand what the charge relates to. Take note of the specific charge amount, date, and any reference numbers associated with it.</p>
+                                <p>To dispute a charge, contact our customer service team with your account details and the specific charge you're questioning. Our advisors will investigate the charge, which may involve reviewing call records, data usage logs, or service activation dates. Common disputes include charges for services you didn't request, incorrect roaming charges, or billing errors following tariff changes.</p>
+                                <p>We aim to resolve billing disputes within 5-10 working days. If we find an error, we'll credit your account immediately. If the charge is found to be correct, we'll explain the reason clearly and provide any relevant evidence. You have the right to escalate your complaint if you're not satisfied with the outcome, and we'll provide details of our complaints procedure upon request.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need to dispute a charge?</strong> Call <a href="tel:01202925102">01202 925102</a> and we'll investigate immediately.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CATEGORY 3: TECHNICAL SUPPORT -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">🔧</span>
+                    <h2>Technical Support</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">Why do I have no signal or poor reception?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Poor signal or no reception can be frustrating, but there are several steps you can take to diagnose and potentially resolve the issue. First, check if there's a known network outage in your area by visiting the O2 service status page or checking the My O2 app, which displays current network conditions and any reported problems.</p>
+                                <p>If no outage is reported, try these troubleshooting steps:</p>
+                                <ul>
+                                    <li>Restart your device completely by powering it off and on again</li>
+                                    <li>Toggle Airplane Mode on for 30 seconds, then turn it off to refresh your network connection</li>
+                                    <li>Check your SIM card is properly inserted and clean</li>
+                                    <li>Try manually selecting the O2 network in your phone's settings</li>
+                                    <li>Ensure your phone's software is up to date</li>
+                                </ul>
+                                <p>Signal strength can vary based on your location, building materials, weather conditions, and network congestion. If you consistently experience poor signal at home or work, we may be able to provide a signal booster or recommend alternative solutions. Our network team continuously works to improve coverage across the UK.</p>
+                                <div class="phone-highlight">
+                                    <strong>Still having signal issues?</strong> Our technical team can run advanced diagnostics. Call <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I set up mobile data and internet on my phone?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Setting up mobile data on your O2 phone is typically automatic when you insert your SIM card, but if you're experiencing issues, we can help you configure it correctly. For most smartphones, mobile data should work immediately once your SIM is activated. You can verify this by checking that mobile data is enabled in your phone's settings.</p>
+                                <p>To manually configure your internet settings:</p>
+                                <ol>
+                                    <li>Go to Settings > Mobile Network > Access Point Names (Android) or Settings > Mobile Data > Mobile Data Network (iPhone)</li>
+                                    <li>Ensure the APN is set to "idata.o2.co.uk" for pay monthly or "payandgo.o2.co.uk" for Pay As You Go</li>
+                                    <li>Leave username and password fields blank</li>
+                                    <li>Save settings and restart your device</li>
+                                </ol>
+                                <p>If you're still unable to connect, try resetting your network settings or contact us for device-specific guidance. We can also send configuration settings directly to your phone via text message. Remember that data usage counts towards your allowance, so keep an eye on your usage through the My O2 app to avoid unexpected charges.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How can I set up voicemail on my O2 phone?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Setting up voicemail on your O2 phone is quick and ensures you never miss important calls. To activate your voicemail, simply dial 901 from your O2 mobile and follow the voice prompts to create your personal greeting and set a PIN for security. Your voicemail is automatically included with your O2 service at no extra cost.</p>
+                                <p>Key voicemail features include:</p>
+                                <ul>
+                                    <li>Store up to 30 messages, each up to 5 minutes long</li>
+                                    <li>Messages are saved for 21 days (or 7 days if you've listened to them)</li>
+                                    <li>Visual voicemail available on compatible iPhones and Android devices</li>
+                                    <li>Access voicemail from abroad by dialling +447802 090 100</li>
+                                </ul>
+                                <p>To check your voicemail, dial 901 from your O2 phone or hold down the "1" key on most devices. You can customise various settings including greeting messages, PIN changes, and notification preferences. If you're having trouble accessing voicemail or need to reset your PIN, our technical support team can assist with quick troubleshooting steps.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What should I do if my phone is lost or stolen?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If your phone is lost or stolen, acting quickly is essential to protect your account and personal information. First, try calling your number to see if someone has found it. If there's no answer, contact O2 immediately on 0344 809 0202 from another phone or visit an O2 store to report it missing. We can temporarily suspend your service to prevent unauthorised usage.</p>
+                                <p>Important steps to take:</p>
+                                <ul>
+                                    <li>Report the loss to O2 to block your SIM and prevent charges</li>
+                                    <li>Contact your insurance provider if you have device cover</li>
+                                    <li>Report the theft to police and obtain a crime reference number</li>
+                                    <li>Change passwords for any accounts accessed on your phone</li>
+                                    <li>Use Find My iPhone or Find My Device to locate or remotely wipe your phone if enabled</li>
+                                </ul>
+                                <p>Once reported, we can arrange a replacement SIM with your existing number, usually delivered within 1-2 working days. If you have O2 Insurance, we can also process a claim for a replacement device. There may be an excess fee depending on your insurance plan. Keeping a record of your phone's IMEI number (dial *#06#) can help with recovery and insurance claims.</p>
+                                <div class="phone-highlight">
+                                    <strong>Lost your phone?</strong> Call us immediately on <a href="tel:01202925102">01202 925102</a> for urgent assistance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I unlock my O2 phone to use with another network?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you'd like to use your O2 phone with a different network provider, you'll need to unlock it first. O2 provides unlocking services free of charge for pay monthly customers once their contract has ended or the device is fully paid off. For Pay As You Go customers, there may be a minimum top-up requirement before unlocking is available.</p>
+                                <p>To request an unlock:</p>
+                                <ol>
+                                    <li>Contact O2 customer service or visit an O2 store with your account details</li>
+                                    <li>Provide your phone's IMEI number (dial *#06# to find it)</li>
+                                    <li>We'll verify your eligibility and process the unlock request</li>
+                                    <li>For iPhones, unlocking is done remotely and typically takes up to 72 hours</li>
+                                    <li>For Android devices, we'll provide an unlock code with instructions</li>
+                                </ol>
+                                <p>Once unlocked, your phone can accept SIM cards from any compatible network. Note that unlocking doesn't cancel your O2 contract, and you'll remain responsible for any outstanding payments. Some devices purchased directly from manufacturers may already be unlocked, so it's worth checking before requesting an unlock code.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I transfer my contacts and data to a new phone?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Transferring your contacts and data to a new phone is easier than ever with modern backup and transfer tools. The best method depends on your current and new devices. For most smartphones, cloud backup services are the most reliable option. iPhone users can use iCloud backup, while Android users can use Google Drive backup.</p>
+                                <p>Recommended transfer methods:</p>
+                                <ul>
+                                    <li><strong>iPhone to iPhone:</strong> Use Quick Start by placing your old phone near your new one, or restore from an iCloud backup</li>
+                                    <li><strong>Android to Android:</strong> Use Google's built-in backup and restore feature during setup</li>
+                                    <li><strong>iPhone to Android or vice versa:</strong> Use the "Move to iOS" or "Switch to Android" apps</li>
+                                    <li><strong>Via computer:</strong> Use iTunes (iPhone) or Smart Switch (Samsung) to create a full backup</li>
+                                </ul>
+                                <p>O2 stores offer free data transfer services when you purchase a new device, and our O2 Gurus can guide you through the process step-by-step. Remember to back up your old device before starting the transfer, and keep both devices charged throughout the process. Photos, videos, and large files may take longer to transfer depending on your internet connection speed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Why is my mobile internet running slowly?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Slow mobile internet can be caused by various factors, from network congestion to device settings. First, check your current signal strength – a weak signal will naturally result in slower speeds. Try moving to a different location or near a window if you're indoors, as building materials can significantly affect signal quality.</p>
+                                <p>Common causes and solutions:</p>
+                                <ul>
+                                    <li><strong>Data allowance exceeded:</strong> Check if you've used your monthly data limit, which may result in reduced speeds</li>
+                                    <li><strong>Network congestion:</strong> Speeds may be slower during peak times in busy areas</li>
+                                    <li><strong>Background apps:</strong> Close apps running in the background that may be using data</li>
+                                    <li><strong>Outdated software:</strong> Ensure your phone's operating system is up to date</li>
+                                    <li><strong>Browser cache:</strong> Clear your browser cache and cookies regularly</li>
+                                </ul>
+                                <p>If you're consistently experiencing slow speeds in areas where you previously had good performance, there may be a network issue. Check the O2 service status page for reported problems in your area. For persistent speed issues, our technical team can run diagnostics on your line and account to identify any underlying problems.</p>
+                                <div class="phone-highlight">
+                                    <strong>Experiencing slow speeds?</strong> Our technical team can help optimise your connection. Call <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CATEGORY 4: UPGRADES & DEVICES -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">📱</span>
+                    <h2>Upgrades & Devices</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">When am I eligible for a phone upgrade?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Your upgrade eligibility depends on your current contract type and how long you've been with O2. For standard 24-month contracts, you're typically eligible for an upgrade in the final three months of your agreement. However, O2 Refresh contracts offer more flexibility, allowing you to upgrade anytime once your Device Plan is paid off.</p>
+                                <p>To check your upgrade status:</p>
+                                <ul>
+                                    <li>Log into the My O2 app and look for the "Upgrade" section</li>
+                                    <li>Visit o2.co.uk/upgrade and sign into your account</li>
+                                    <li>Text "UPGRADE" to 61202 for an instant status update</li>
+                                    <li>Call our upgrade team who can check and discuss your options</li>
+                                </ul>
+                                <p>Even if you're not yet eligible for a standard upgrade, we may have early upgrade options available. These typically involve paying off the remaining balance on your current device or adding it to your new agreement. Our upgrade specialists can explain all available options and help you find the best deal on the latest smartphones.</p>
+                                <div class="phone-highlight">
+                                    <strong>Ready to upgrade?</strong> Call <a href="tel:01202925102">01202 925102</a> to discuss the latest deals and your eligibility.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What is O2 Refresh and how does it work?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 Refresh is our revolutionary tariff structure that separates your Device Plan (the cost of your phone) from your Airtime Plan (your minutes, texts, and data). This transparent approach means you always know exactly what you're paying for and gives you unprecedented flexibility with your mobile contract.</p>
+                                <p>Key benefits of O2 Refresh include:</p>
+                                <ul>
+                                    <li><strong>Flexible upgrades:</strong> Upgrade your phone anytime once your Device Plan is paid off, without waiting for your contract to end</li>
+                                    <li><strong>Clear pricing:</strong> See exactly how much your device costs versus your airtime</li>
+                                    <li><strong>No hidden costs:</strong> When your device is paid off, your monthly bill automatically reduces to just the Airtime Plan cost</li>
+                                    <li><strong>Trade-in options:</strong> Trade in your old device to reduce the cost of your new phone</li>
+                                </ul>
+                                <p>For example, if your total monthly payment is £45 (£25 for the device and £20 for airtime), once you've paid off the device, your bill drops to just £20 per month. You can then choose to keep your current phone and enjoy lower bills, or upgrade to a new device and start a new Device Plan. Our team can explain how O2 Refresh works with specific examples based on your preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Can I trade in my old device when upgrading?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, O2 Recycle offers a fantastic trade-in programme that allows you to turn your old device into money towards your upgrade. We accept phones, tablets, and smartwatches from any network, not just O2 devices. The value of your trade-in depends on the make, model, and condition of your device.</p>
+                                <p>How O2 Recycle works:</p>
+                                <ol>
+                                    <li>Visit o2recycle.co.uk or ask in-store for a trade-in valuation</li>
+                                    <li>Get an instant quote based on your device's condition (Working, Broken, or Dead)</li>
+                                    <li>Send your device using our free postage pack or drop it off at an O2 store</li>
+                                    <li>Receive payment via bank transfer or cheque within 3-5 working days</li>
+                                </ol>
+                                <p>Trading in is environmentally responsible too – we ensure all devices are either refurbished for resale or recycled responsibly. Even if your device is damaged or not working, it may still have value. We also offer a price promise, meaning if you find a better trade-in price elsewhere, we'll match it. Our in-store team can help transfer your data to your new device before you trade in your old one.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What insurance options are available for my device?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 offers comprehensive device insurance through our partnership with leading insurers, providing peace of mind for your valuable technology. Our insurance plans cover accidental damage, liquid damage, theft, and loss, ensuring you're protected against the unexpected costs of repairing or replacing your device.</p>
+                                <p>Insurance plan options include:</p>
+                                <ul>
+                                    <li><strong>O2 Insurance:</strong> Full cover including accidental damage, theft, loss, and breakdown</li>
+                                    <li><strong>Damage Cover:</strong> Protection against accidental and liquid damage only</li>
+                                    <li><strong>Theft & Loss Cover:</strong> Protection if your device is stolen or lost</li>
+                                </ul>
+                                <p>Claims can be made 24/7 through our dedicated claims line, and most approved claims result in a replacement device delivered within 1-2 working days. An excess fee applies to each claim, typically ranging from £50-£150 depending on your device. Insurance can be added when you purchase your device or within 28 days of purchase by visiting an O2 store. Our team can explain the full terms and help you choose the right level of cover for your needs and budget.</p>
+                                <div class="phone-highlight">
+                                    <strong>Want to protect your device?</strong> Call <a href="tel:01202925102">01202 925102</a> to discuss insurance options.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I return a device if I change my mind?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 offers a generous returns policy to give you confidence when purchasing a new device. Under the Consumer Contracts Regulations, you have 14 days from receiving your device to return it for a full refund if you change your mind. This cooling-off period applies to purchases made online, over the phone, or in-store.</p>
+                                <p>To return a device:</p>
+                                <ol>
+                                    <li>Contact O2 customer service to notify us of your return within 14 days</li>
+                                    <li>Ensure the device is in its original condition with all accessories and packaging</li>
+                                    <li>Remove any personal accounts (iCloud, Google, etc.) and factory reset the device</li>
+                                    <li>Use the provided returns label or visit an O2 store to complete the return</li>
+                                </ol>
+                                <p>If you purchased in-store, you can return directly to any O2 store with your receipt. For online or phone orders, we'll provide a prepaid returns label. Refunds are typically processed within 14 days of receiving the returned device. If your device shows signs of use beyond normal handling, a deduction may be made from your refund. If you experience any issues with your device rather than simply changing your mind, different warranty terms may apply.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What happens at the end of my contract?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>When your O2 contract reaches its end, you have several options to choose from depending on your needs. We believe in giving our customers flexibility, so you won't be automatically tied into a new long-term agreement. Instead, we'll contact you before your contract ends to discuss your options.</p>
+                                <p>Your end-of-contract options include:</p>
+                                <ul>
+                                    <li><strong>Upgrade to a new device:</strong> Choose from the latest smartphones with a new contract</li>
+                                    <li><strong>Switch to SIM Only:</strong> Keep your current phone and enjoy lower monthly costs with a SIM-only plan</li>
+                                    <li><strong>Continue on a rolling contract:</strong> Stay on your current plan with 30 days' notice to cancel</li>
+                                    <li><strong>Move to Pay As You Go:</strong> Switch to flexible top-up payments with no monthly commitment</li>
+                                </ul>
+                                <p>For O2 Refresh customers, your bill automatically reduces once your Device Plan is paid off, meaning you only pay for your airtime. This can result in significant monthly savings while keeping the same phone. Our team can review your usage over the past year and recommend the most cost-effective option for your needs. We'll never pressure you into a decision – we're here to help you find the best solution.</p>
+                                <div class="phone-highlight">
+                                    <strong>Contract ending soon?</strong> Call <a href="tel:01202925102">01202 925102</a> to explore your options.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CATEGORY 5: ACCOUNT MANAGEMENT -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">👤</span>
+                    <h2>Account Management</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">How do I register for a My O2 account?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Registering for a My O2 account gives you convenient 24/7 access to manage your O2 services online or through the mobile app. The registration process is straightforward and only takes a few minutes to complete. You'll need your O2 mobile number and some personal details to verify your identity.</p>
+                                <p>To register:</p>
+                                <ol>
+                                    <li>Visit o2.co.uk/my-o2 or download the My O2 app from your device's app store</li>
+                                    <li>Click "Register" and enter your O2 mobile number</li>
+                                    <li>We'll send you a verification code via text message</li>
+                                    <li>Enter the code and create your secure password</li>
+                                    <li>Complete your profile with your personal details</li>
+                                </ol>
+                                <p>Once registered, you can view and pay bills, check your allowances, manage your tariff, set up parental controls, and access exclusive offers. The My O2 app also provides real-time usage tracking and notifications when you're approaching your limits. If you have multiple O2 numbers on your account, you can manage them all from a single login. If you experience any issues during registration, our support team can guide you through the process.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How can I change my personal details or address?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Keeping your personal details up to date ensures you receive important communications and that your account remains secure. You can update most details quickly through the My O2 app or online account without needing to contact us. Simply log in, navigate to "Account Settings" and select the information you'd like to change.</p>
+                                <p>You can update the following online:</p>
+                                <ul>
+                                    <li>Contact phone numbers and email addresses</li>
+                                    <li>Home address (for billing and correspondence)</li>
+                                    <li>Marketing preferences and communication settings</li>
+                                    <li>Security questions and password</li>
+                                </ul>
+                                <p>For certain changes, such as updating your name following marriage or deed poll, you may need to provide supporting documentation. These can be submitted by visiting an O2 store with your ID or by posting copies to our customer services team. It's important to update your address promptly when you move house to ensure bills and important notifications reach you. If you have a Direct Debit, remember to update your bank details separately if they've changed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I add or remove services from my account?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Managing your O2 services is simple and can be done through multiple channels depending on your preference. The My O2 app and online account allow you to add or remove many services instantly, giving you complete control over your monthly costs and features.</p>
+                                <p>Services you can manage include:</p>
+                                <ul>
+                                    <li><strong>Data bolt-ons:</strong> Add extra data when you're running low</li>
+                                    <li><strong>International calling:</strong> Enable discounted rates for calling abroad</li>
+                                    <li><strong>O2 Travel:</strong> Activate daily roaming bundles for your trips</li>
+                                    <li><strong>Device insurance:</strong> Add or cancel insurance cover</li>
+                                    <li><strong>Premium services:</strong> Manage or block chargeable third-party services</li>
+                                </ul>
+                                <p>To add a service, log into My O2 and browse available options in the "Services" or "Bolt-ons" section. Most services activate immediately, while others may take up to 24 hours. To remove a service, you can usually cancel through the same menu, though some services require 30 days' notice. If you're unsure which services you currently have active or need advice on the best options for your usage, our team can review your account and make personalised recommendations.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need help managing services?</strong> Call <a href="tel:01202925102">01202 925102</a> for personalised advice.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I cancel my O2 contract?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you need to cancel your O2 contract, we're here to make the process as straightforward as possible. The cancellation process depends on your contract type and how long you've been with us. For standard contracts, you can cancel without penalty once your minimum term has ended by giving 30 days' notice.</p>
+                                <p>Cancellation options:</p>
+                                <ul>
+                                    <li><strong>End of contract:</strong> Give 30 days' notice with no early termination fees</li>
+                                    <li><strong>Early cancellation:</strong> Pay an early termination charge based on your remaining contract period</li>
+                                    <li><strong>Cooling-off period:</strong> Cancel within 14 days of starting your contract for a full refund</li>
+                                    <li><strong>Special circumstances:</strong> Some situations may waive early termination fees</li>
+                                </ul>
+                                <p>To cancel, contact our customer service team who will discuss your reasons and explore whether there's an alternative solution that might better suit your needs. If cancellation is still your preference, we'll calculate any final charges, explain the process, and confirm your disconnection date. You'll receive a final bill approximately 14 days after disconnection. If you're moving to a new provider, you can request a PAC code to keep your number or a STAC code if you want a new number.</p>
+                                <div class="phone-highlight">
+                                    <strong>Thinking of leaving?</strong> Let us try to help first. Call <a href="tel:01202925102">01202 925102</a> to discuss your options.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I get a PAC or STAC code to switch networks?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>If you're switching to a different network and want to keep your current phone number, you'll need a PAC (Porting Authorisation Code). If you'd prefer a new number with your new provider, you'll need a STAC (Service Termination Authorisation Code). O2 is required by law to provide these codes immediately upon request.</p>
+                                <p>Getting your code is simple:</p>
+                                <ul>
+                                    <li><strong>Text to Switch:</strong> Text "PAC" to 65075 for a PAC code, or "STAC" to 75075 for a STAC code</li>
+                                    <li><strong>Online:</strong> Request through the My O2 app or online account</li>
+                                    <li><strong>By phone:</strong> Call our customer service team</li>
+                                </ul>
+                                <p>Your PAC or STAC code will be provided within 60 seconds via text message and remains valid for 30 days. Once you give this code to your new provider, they'll handle the transfer process, which typically takes one working day. Your O2 service will remain active until the port is complete, ensuring no loss of service. If you change your mind after requesting a code, simply don't use it – it will expire automatically after 30 days with no impact on your O2 service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CATEGORY 6: CONTACT & SUPPORT -->
+            <section class="faq-category">
+                <div class="category-header">
+                    <span class="category-icon">📞</span>
+                    <h2>Contact & Support</h2>
+                </div>
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">What is the best way to contact O2 customer service?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 offers multiple ways to contact us, ensuring you can reach us through whichever channel is most convenient for you. The best method depends on the nature of your enquiry and your personal preference. For urgent issues or complex problems, we recommend calling our customer service line for immediate assistance from a knowledgeable advisor.</p>
+                                <p>Contact options include:</p>
+                                <ul>
+                                    <li><strong>Phone:</strong> Call 202 from your O2 mobile or 0344 809 0202 from any phone for general enquiries</li>
+                                    <li><strong>Live Chat:</strong> Available through the O2 website and My O2 app for quick text-based support</li>
+                                    <li><strong>Social Media:</strong> Reach us on Twitter (@O2) or Facebook for general queries</li>
+                                    <li><strong>In-Store:</strong> Visit any O2 store for face-to-face assistance</li>
+                                    <li><strong>Online:</strong> Browse our comprehensive help articles at o2.co.uk/help</li>
+                                </ul>
+                                <p>For the fastest service, have your account details ready when you contact us, including your mobile number and any relevant reference numbers. Our phone lines are busiest during lunch hours and early evenings, so calling outside these times may reduce your wait. For non-urgent matters, live chat and social media often provide the quickest response times.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need to speak with us?</strong> Call our dedicated helpdesk on <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How do I make a complaint about O2 services?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>At O2, we strive to provide excellent service, but we understand that sometimes things don't go as expected. If you're unhappy with any aspect of our service, we want to hear about it so we can put things right. We take all complaints seriously and have a clear process to ensure your concerns are addressed promptly and fairly.</p>
+                                <p>How to make a complaint:</p>
+                                <ol>
+                                    <li><strong>Contact us:</strong> Call customer service, use live chat, or visit a store to explain your issue</li>
+                                    <li><strong>Provide details:</strong> Give us as much information as possible, including dates, reference numbers, and what you'd like us to do</li>
+                                    <li><strong>Resolution:</strong> We'll aim to resolve your complaint during your first contact</li>
+                                    <li><strong>Escalation:</strong> If you're not satisfied, ask to speak to a manager or request a formal review</li>
+                                </ol>
+                                <p>We'll acknowledge your complaint within 24 hours and aim to provide a full response within 5 working days. If we need more time, we'll keep you updated on our progress. If you're not satisfied with our final response, you can escalate your complaint to the Communications Ombudsman, an independent dispute resolution service. Full details of our complaints procedure are available on our website.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">What support is available for customers with disabilities?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>O2 is committed to ensuring all our customers can access our services and receive the support they need. We offer a range of accessibility services and adjustments to make your experience with O2 as smooth and convenient as possible. Our advisors receive training to assist customers with various accessibility requirements.</p>
+                                <p>Available support includes:</p>
+                                <ul>
+                                    <li><strong>Text Relay service:</strong> For customers who are deaf or hard of hearing</li>
+                                    <li><strong>Billing in alternative formats:</strong> Including large print, braille, or audio CD</li>
+                                    <li><strong>Third-party authorisation:</strong> Allowing a trusted person to manage your account</li>
+                                    <li><strong>Priority fault repair:</strong> Faster resolution for customers who rely on their phone for medical or safety reasons</li>
+                                    <li><strong>Accessible stores:</strong> All O2 stores are wheelchair accessible with hearing loops available</li>
+                                </ul>
+                                <p>If you have specific accessibility needs, please let us know so we can make appropriate adjustments to how we communicate with you and provide our services. We can also provide information about accessible devices and features that may enhance your mobile experience. Our team is always happy to discuss your individual requirements and find the best solutions for you.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need accessibility support?</strong> Call <a href="tel:01202925102">01202 925102</a> to discuss your requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">How can I get help setting up my new device?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Setting up a new device can feel overwhelming, but O2 provides multiple support options to help you get started confidently. Whether you're moving from an old phone or completely new to smartphones, our team is here to ensure your new device is set up correctly and you're comfortable using it.</p>
+                                <p>Setup support options:</p>
+                                <ul>
+                                    <li><strong>O2 Guru sessions:</strong> Free in-store appointments where our experts help set up your device and teach you key features</li>
+                                    <li><strong>In-store setup:</strong> Purchase your device in-store and our team will help with initial setup and data transfer</li>
+                                    <li><strong>Online guides:</strong> Step-by-step setup instructions at o2.co.uk/help</li>
+                                    <li><strong>Phone support:</strong> Call our technical team for guided setup assistance</li>
+                                </ul>
+                                <p>Our O2 Gurus can help with everything from transferring your contacts and photos to setting up email accounts, installing essential apps, and showing you how to use key features. These sessions are completely free and available by appointment at most O2 stores. We can also provide advice on security settings, parental controls, and accessibility features to ensure your device is configured perfectly for your needs.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need help with setup?</strong> Book a free Guru session or call <a href="tel:01202925102">01202 925102</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">Is there a way to check the status of my support request?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, O2 provides several ways to track the progress of your support requests, complaints, or technical issues. We understand that waiting for a resolution can be frustrating, so we aim to keep you informed at every stage of the process and provide easy ways to check on your case status.</p>
+                                <p>Tracking options include:</p>
+                                <ul>
+                                    <li><strong>My O2 app:</strong> View the status of recent support cases in the "Support" section</li>
+                                    <li><strong>Reference numbers:</strong> Use the reference number provided when you first contacted us to check status by phone or online</li>
+                                    <li><strong>Email updates:</strong> We'll send progress updates to your registered email address</li>
+                                    <li><strong>SMS notifications:</strong> Receive text updates for urgent or time-sensitive issues</li>
+                                </ul>
+                                <p>If you've been waiting longer than expected or need an update on your case, don't hesitate to contact us. Having your reference number ready will help us locate your case quickly. For complex technical issues, we'll provide realistic timeframes for resolution and explain any delays if they occur. Our goal is to resolve all issues as quickly as possible while ensuring the solution is thorough and effective.</p>
+                                <div class="phone-highlight">
+                                    <strong>Need an update on your case?</strong> Call <a href="tel:01202925102">01202 925102</a> with your reference number.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="faq-footer">
+            <h3>Still Have Questions?</h3>
+            <p>Our friendly team is ready to help with any questions not covered in this FAQ. Whether you need personalised advice, have a complex technical issue, or simply prefer speaking to someone, we're here for you.</p>
+            <a href="tel:01202925102" class="cta-button">📞 Call 01202 925102 Now</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">Lines open Monday-Friday 8am-9pm, Saturday 8am-8pm, Sunday 9am-6pm</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all other items (optional - remove this block to allow multiple open)
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!-- ============================================ -->
+<!-- COOKIE CONSENT BANNER IMPLEMENTATION -->
+<!-- For 02Helpdesk.co.uk - GDPR Compliant -->
+<!-- ============================================ -->
+
+<!-- STEP 1: Add this CSS to your main.css file -->
+<style>
+/* Cookie Banner Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  z-index: 9999;
+  display: none;
+  border-top: 3px solid #005eb8;
+}
+
+.cookie-banner.show {
+  display: block;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.cookie-banner .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cookie-banner-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cookie-banner-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #005eb8;
+  font-size: 1.1rem;
+}
+
+.cookie-banner-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cookie-banner-content a {
+  color: #005eb8;
+  text-decoration: underline;
+}
+
+.cookie-banner-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cookie-btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cookie-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-btn-accept {
+  background: #005eb8;
+  color: white;
+}
+
+.cookie-btn-accept:hover {
+  background: #004a94;
+}
+
+.cookie-btn-reject {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.cookie-btn-reject:hover {
+  background: #e9ecef;
+}
+
+.cookie-btn-customize {
+  background: transparent;
+  color: #005eb8;
+  border: 1px solid #005eb8;
+}
+
+.cookie-btn-customize:hover {
+  background: rgba(0, 94, 184, 0.1);
+}
+
+/* Cookie Settings Modal */
+.cookie-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-modal.show {
+  display: flex;
+}
+
+.cookie-modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.cookie-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cookie-modal-header h2 {
+  margin: 0;
+  color: #005eb8;
+}
+
+.cookie-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.cookie-category {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cookie-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cookie-category-header h4 {
+  margin: 0;
+  color: #333;
+}
+
+.cookie-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.cookie-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.cookie-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.cookie-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.cookie-toggle input:checked + .cookie-toggle-slider {
+  background-color: #005eb8;
+}
+
+.cookie-toggle input:checked + .cookie-toggle-slider:before {
+  transform: translateX(24px);
+}
+
+.cookie-toggle input:disabled + .cookie-toggle-slider {
+  background-color: #005eb8;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cookie-category p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.cookie-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cookie-banner {
+    padding: 1rem;
+  }
+  
+  .cookie-banner .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .cookie-banner-buttons {
+    justify-content: stretch;
+  }
+  
+  .cookie-btn {
+    flex: 1;
+  }
+}
+</style>
+
+<!-- STEP 2: Add this HTML before the closing </body> tag on ALL pages -->
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="container">
+    <div class="cookie-banner-content">
+      <h3>We Value Your Privacy</h3>
+      <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="cookie-policy.html">Read our Cookie Policy</a> for more information.</p>
+    </div>
+    <div class="cookie-banner-buttons">
+      <button onclick="cookieConsent.acceptAll()" class="cookie-btn cookie-btn-accept">Accept All</button>
+      <button onclick="cookieConsent.rejectNonEssential()" class="cookie-btn cookie-btn-reject">Reject Non-Essential</button>
+      <button onclick="cookieConsent.showModal()" class="cookie-btn cookie-btn-customize">Customize</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <div class="cookie-modal-header">
+      <h2>Cookie Preferences</h2>
+      <button onclick="cookieConsent.hideModal()" class="cookie-modal-close">&times;</button>
+    </div>
+    
+    <div class="cookie-category">
+      <div class="cookie-category-header">
+        <h4>Essential Cookies</h4>
+        <label class="cookie-toggle">
+          <input type="checkbox" checked disabled>
+          <span class="cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p>These cookies are necessary for the website to function and cannot be switched off. They include session cookies and security features.</p>
+    </div>
+    
+    <div class="cookie-category">
+      <div class="cookie-category-header">
+        <h4>Analytics Cookies</h4>
+        <label class="cookie-toggle">
+          <input type="checkbox" id="analytics-cookies" checked>
+          <span class="cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This includes Google Analytics.</p>
+    </div>
+    
+    <div class="cookie-category">
+      <div class="cookie-category-header">
+        <h4>Advertising Cookies</h4>
+        <label class="cookie-toggle">
+          <input type="checkbox" id="advertising-cookies" checked>
+          <span class="cookie-toggle-slider"></span>
+        </label>
+      </div>
+      <p>These cookies are used to deliver relevant advertisements and track the effectiveness of our marketing campaigns. This includes Google AdSense.</p>
+    </div>
+    
+    <div class="cookie-modal-footer">
+      <button onclick="cookieConsent.savePreferences()" class="cookie-btn cookie-btn-accept">Save Preferences</button>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 3: Add this JavaScript before the closing </body> tag -->
+
+<script>
+// Cookie Consent Manager
+const cookieConsent = {
+  // Initialize
+  init() {
+    // Check if user has already made a choice
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+      // Show banner after a short delay
+      setTimeout(() => {
+        document.getElementById('cookie-banner').classList.add('show');
+      }, 1000);
+    } else {
+      // Apply saved preferences
+      this.applyPreferences(JSON.parse(consent));
+    }
+  },
+
+  // Accept all cookies
+  acceptAll() {
+    const preferences = {
+      essential: true,
+      analytics: true,
+      advertising: true,
+      timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+    document.getElementById('cookie-banner').classList.remove('show');
+    this.applyPreferences(preferences);
+    this.loadAnalytics();
+    this.loadAdvertising();
+  },
+
+  // Reject non-essential cookies
+  rejectNonEssential() {
+    const preferences = {
+      essential: true,
+      analytics: false,
+      advertising: false,
+      timestamp: new Date().toISOString()
+    };
+    localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+    document.getElementById('cookie-banner').classList.remove('show');
+    this.applyPreferences(preferences);
+  },
+
+  // Show customization modal
+  showModal() {
+    document.getElementById('cookie-modal').classList.add('show');
+  },
+
+  // Hide customization modal
+  hideModal() {
+    document.getElementById('cookie-modal').classList.remove('show');
+  },
+
+  // Save custom preferences
+  savePreferences() {
+    const analyticsEnabled = document.getElementById('analytics-cookies').checked;
+    const advertisingEnabled = document.getElementById('advertising-cookies').checked;
+    
+    const preferences = {
+      essential: true,
+      analytics: analyticsEnabled,
+      advertising: advertisingEnabled,
+      timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem('cookieConsent', JSON.stringify(preferences));
+    document.getElementById('cookie-modal').classList.remove('show');
+    document.getElementById('cookie-banner').classList.remove('show');
+    this.applyPreferences(preferences);
+    
+    if (analyticsEnabled) this.loadAnalytics();
+    if (advertisingEnabled) this.loadAdvertising();
+  },
+
+  // Apply preferences
+  applyPreferences(preferences) {
+    // Essential cookies are always loaded
+    
+    if (preferences.analytics) {
+      this.loadAnalytics();
+    }
+    
+    if (preferences.advertising) {
+      this.loadAdvertising();
+    }
+  },
+
+  // Load Google Analytics
+  loadAnalytics() {
+    // Google Analytics 4
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+    document.head.appendChild(script);
+    
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  },
+
+  // Load Google AdSense
+  loadAdvertising() {
+    // AdSense script will be loaded here
+    // Replace with your actual AdSense code after approval
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  },
+
+  // Check if analytics is allowed
+  canUseAnalytics() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) return false;
+    return JSON.parse(consent).analytics === true;
+  },
+
+  // Check if advertising is allowed
+  canUseAdvertising() {
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) return false;
+    return JSON.parse(consent).advertising === true;
+  }
+};
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+  cookieConsent.init();
+});
+
+// Close modal when clicking outside
+document.getElementById('cookie-modal').addEventListener('click', (e) => {
+  if (e.target.id === 'cookie-modal') {
+    cookieConsent.hideModal();
+  }
+});
+</script>
+
+<!-- ============================================ -->
+<!-- IMPLEMENTATION INSTRUCTIONS -->
+<!-- ============================================ -->
+
+<!--
+1. Copy the CSS to your main.css file
+2. Copy the HTML banner code before </body> on all pages
+3. Copy the JavaScript before </body> after the banner HTML
+4. Replace 'GA_MEASUREMENT_ID' with your actual Google Analytics ID (optional)
+5. After AdSense approval, add your AdSense code in the loadAdvertising() function
+6. Test by clearing localStorage and refreshing the page
+7. Verify the banner appears and preferences are saved correctly
+-->
