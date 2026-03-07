@@ -7,7 +7,7 @@
 
 ### 1. Replace Tracking IDs
 In ALL HTML files, replace these placeholders with your real Google Ads values:
-- `AW-XXXXXXXXXX` → Your Google Ads Conversion ID (e.g., `AW-123456789`)
+- `AW-17998623481` → Your Google Ads Conversion ID (e.g., `AW-123456789`)
 - `CALL_CONVERSION_LABEL` → Your call conversion label (e.g., `AbCdEfGhIj`)
 
 To get these values:
@@ -266,7 +266,7 @@ After 2 weeks of data:
 3. **Dedicated landing page** (`call.html`) for paid traffic
 
 ### After You Get Your Google Ads ID:
-1. Replace `AW-XXXXXXXXXX` in all HTML files with your real ID
+1. Replace `AW-17998623481` in all HTML files with your real ID
 2. Replace `CALL_CONVERSION_LABEL` with your real call conversion label
 3. Link Google Ads to Google Analytics for full funnel visibility
 4. Enable call reporting in Google Ads to see call duration data
@@ -274,7 +274,7 @@ After 2 weeks of data:
 ### Quick Replace Command:
 ```bash
 # Replace with your actual IDs (run from project root)
-find . -name "*.html" -exec sed -i 's/AW-XXXXXXXXXX/AW-YOUR-REAL-ID/g' {} +
+find . -name "*.html" -exec sed -i 's/AW-17998623481/AW-YOUR-REAL-ID/g' {} +
 find . -name "*.html" -exec sed -i 's/CALL_CONVERSION_LABEL/YOUR-REAL-LABEL/g' {} +
 ```
 
