@@ -13,6 +13,15 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Privacy Policy | O2 Helpdesk UK">
     <meta name="twitter:description" content="Privacy Policy for O2 Helpdesk UK. Learn how we collect, use, and protect your personal data.">
+        <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17998623481"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17998623481');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -185,6 +194,22 @@
     })();
     </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+        <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17998623481/CoR0CO_x_oMcEPnltIZD',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>
