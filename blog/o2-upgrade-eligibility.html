@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "Article", "headline": "O2 Upgrade Eligibility: When Can You Upgrade?", "description": "Find out when you're eligible for an O2 upgrade.", "url": "https://02helpdesk.co.uk/blog/o2-upgrade-eligibility.html", "datePublished": "2025-01-15", "dateModified": "2025-03-01", "author": {"@type": "Organization", "name": "O2 Helpdesk UK"}, "publisher": {"@type": "Organization", "name": "O2 Helpdesk UK", "url": "https://02helpdesk.co.uk"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://02helpdesk.co.uk/blog/o2-upgrade-eligibility.html"}}
     </script>
+        <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17998623481"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17998623481');
+    </script>
+
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -160,12 +169,46 @@
                 <div class="footer-column"><h4>Contact</h4><ul><li>📞 <a href="tel:01202925102">01202 925102</a></li><li>✉️ <a href="mailto:support@02helpdesk.co.uk">support@02helpdesk.co.uk</a></li></ul></div>
             </div>
             <div class="footer-disclaimer"><p><strong>Disclaimer:</strong> O2 Helpdesk UK is an independent support service and is not affiliated with O2.</p></div>
-            <div class="footer-bottom"><p class="footer-copyright">© 2025 O2 Helpdesk UK. All rights reserved.</p></div>
+            <div class="footer-bottom"><p class="footer-copyright">© 2026 O2 Helpdesk UK. All rights reserved.</p></div>
         </div>
     </footer>
     
-    <div class="cookie-consent"><div class="cookie-container"><p class="cookie-text">We use cookies to improve your experience. <a href="/cookie-policy.html">Cookie Policy</a>.</p><button class="btn btn-primary cookie-accept">Accept</button></div></div>
+    <div id="cookie-consent-banner" class="cookie-consent" style="display:none;">
+        <div class="cookie-container" style="max-width:900px;margin:0 auto;padding:1.25rem;">
+            <p class="cookie-text" style="margin-bottom:0.75rem;"><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, serve personalised advertisements through Google AdSense, and analyse our traffic via Google Analytics. We also use Google Ads conversion tracking to measure the effectiveness of our advertising campaigns.</p>
+            <p class="cookie-text" style="margin-bottom:1rem;font-size:0.9rem;">By clicking "Accept All", you consent to the use of ALL cookies. You may choose "Essential Only" to reject non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="cookie-accept-all" style="padding:0.6rem 1.5rem;">Accept All</button>
+                <button class="btn" id="cookie-essential-only" style="padding:0.6rem 1.5rem;background:#e2e8f0;color:#1a202c;border:none;border-radius:6px;cursor:pointer;">Essential Only</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var consent = localStorage.getItem("cookieConsent");
+        if (!consent) { document.getElementById("cookie-consent-banner").style.display = "block"; }
+        document.getElementById("cookie-accept-all").addEventListener("click", function() { localStorage.setItem("cookieConsent", "all"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+        document.getElementById("cookie-essential-only").addEventListener("click", function() { localStorage.setItem("cookieConsent", "essential"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+    })();
+    </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+    
+    <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17998623481/CoR0CO_x_oMcEPnltIZD',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="../main.js"></script>
 </body>
 </html>

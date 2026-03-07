@@ -16,11 +16,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://02helpdesk.co.uk/contact-us.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://02helpdesk.co.uk/billing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -129,5 +124,25 @@
     <loc>https://02helpdesk.co.uk/blog/o2-voicemail-setup.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://02helpdesk.co.uk/blog/o2-vs-ee-comparison.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://02helpdesk.co.uk/blog/o2-cancel-contract.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://02helpdesk.co.uk/blog/o2-mobile-insurance-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://02helpdesk.co.uk/blog/o2-reduce-bill-tips.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

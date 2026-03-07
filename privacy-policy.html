@@ -13,6 +13,15 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Privacy Policy | O2 Helpdesk UK">
     <meta name="twitter:description" content="Privacy Policy for O2 Helpdesk UK. Learn how we collect, use, and protect your personal data.">
+        <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17998623481"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17998623481');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -49,7 +58,7 @@
         
         <section class="content-section">
             <div class="content-wrapper">
-                <p><strong>Last Updated:</strong> January 2025</p>
+                <p><strong>Last Updated:</strong> March 2026</p>
                 
                 <h2>1. Introduction</h2>
                 <p>O2 Helpdesk UK ("we", "our", or "us") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you use our services.</p>
@@ -126,14 +135,28 @@
                 
                 <h2>9. Cookies</h2>
                 <p>Our website uses cookies to improve your browsing experience. See our <a href="/cookie-policy.html">Cookie Policy</a> for more details.</p>
-                
-                <h2>10. Contact Us</h2>
+
+                <h2>10. Advertising and Analytics Partners</h2>
+                <p>We work with the following third-party advertising and analytics partners:</p>
+
+                <h3>10.1 Google AdSense</h3>
+                <p>We use Google AdSense to display advertisements on our website. Google AdSense may use cookies and web beacons to collect information about your visits to this and other websites in order to serve personalised advertisements about goods and services of interest to you. You can learn more about how Google uses your data at <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">Google's Advertising Policies</a>.</p>
+                <p>You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google Ads Settings</a> or the <a href="https://optout.networkadvertising.org/" rel="noopener noreferrer" target="_blank">Network Advertising Initiative opt-out page</a>.</p>
+
+                <h3>10.2 Google Ads (Conversion Tracking)</h3>
+                <p>We use Google Ads to promote our services. When you interact with one of our Google advertisements and visit our website, Google Ads may place a conversion tracking cookie on your device. This helps us understand how effective our advertising campaigns are and which ads lead to customer interactions. The information collected is anonymous and does not personally identify you.</p>
+                <p>You can disable Google's conversion tracking cookie through your browser settings or by visiting <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">Google Ads Settings</a>.</p>
+
+                <h3>10.3 Google Analytics</h3>
+                <p>We use Google Analytics to understand how visitors interact with our website. Google Analytics uses cookies to collect anonymous information such as the number of visitors, which pages are visited, and how long visitors spend on each page. This data helps us improve our website and services. For more information, see <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google's Privacy Policy</a>.</p>
+
+                <h2>11. Contact Us</h2>
                 <p>If you have questions about this Privacy Policy or how we handle your data, please contact:</p>
                 <p><strong>Data Protection Officer</strong><br>
                 Email: <a href="mailto:support@02helpdesk.co.uk">support@02helpdesk.co.uk</a><br>
                 Phone: <a href="tel:01202925102">01202 925102</a></p>
                 
-                <h2>11. Changes to This Policy</h2>
+                <h2>12. Changes to This Policy</h2>
                 <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
             </div>
         </section>
@@ -148,12 +171,45 @@
                 <div class="footer-column"><h4>Contact</h4><ul><li>📞 <a href="tel:01202925102">01202 925102</a></li><li>✉️ <a href="mailto:support@02helpdesk.co.uk">support@02helpdesk.co.uk</a></li></ul></div>
             </div>
             <div class="footer-disclaimer"><p><strong>Disclaimer:</strong> O2 Helpdesk UK is an independent support service and is not affiliated with O2.</p></div>
-            <div class="footer-bottom"><p class="footer-copyright">© 2025 O2 Helpdesk UK. All rights reserved.</p></div>
+            <div class="footer-bottom"><p class="footer-copyright">© 2026 O2 Helpdesk UK. All rights reserved.</p></div>
         </div>
     </footer>
     
-    <div class="cookie-consent"><div class="cookie-container"><p class="cookie-text">We use cookies to improve your experience. <a href="/cookie-policy.html">Cookie Policy</a>.</p><button class="btn btn-primary cookie-accept">Accept</button></div></div>
+    <div id="cookie-consent-banner" class="cookie-consent" style="display:none;">
+        <div class="cookie-container" style="max-width:900px;margin:0 auto;padding:1.25rem;">
+            <p class="cookie-text" style="margin-bottom:0.75rem;"><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, serve personalised advertisements through Google AdSense, and analyse our traffic via Google Analytics. We also use Google Ads conversion tracking to measure the effectiveness of our advertising campaigns.</p>
+            <p class="cookie-text" style="margin-bottom:1rem;font-size:0.9rem;">By clicking "Accept All", you consent to the use of ALL cookies. You may choose "Essential Only" to reject non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="cookie-accept-all" style="padding:0.6rem 1.5rem;">Accept All</button>
+                <button class="btn" id="cookie-essential-only" style="padding:0.6rem 1.5rem;background:#e2e8f0;color:#1a202c;border:none;border-radius:6px;cursor:pointer;">Essential Only</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var consent = localStorage.getItem("cookieConsent");
+        if (!consent) { document.getElementById("cookie-consent-banner").style.display = "block"; }
+        document.getElementById("cookie-accept-all").addEventListener("click", function() { localStorage.setItem("cookieConsent", "all"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+        document.getElementById("cookie-essential-only").addEventListener("click", function() { localStorage.setItem("cookieConsent", "essential"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+    })();
+    </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+        <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17998623481/CoR0CO_x_oMcEPnltIZD',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>

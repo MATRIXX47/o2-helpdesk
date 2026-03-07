@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What services does the O2 Helpdesk provide?", "acceptedAnswer": {"@type": "Answer", "text": "Comprehensive support for O2 mobile services including account management, billing, technical troubleshooting, device upgrades, and customer service with personalised advice."}}, {"@type": "Question", "name": "How do I check my O2 account balance and allowances?", "acceptedAnswer": {"@type": "Answer", "text": "Check balance via My O2 app, dial *#10# from your phone, log into o2.co.uk/my-o2, or text BALANCE to 20202."}}, {"@type": "Question", "name": "Why is my O2 bill higher than usual?", "acceptedAnswer": {"@type": "Answer", "text": "Common causes include out-of-bundle charges, international roaming, premium rate calls, add-ons, or one-off fees. Check bill breakdown in My O2 app."}}, {"@type": "Question", "name": "Why do I have no signal or poor reception?", "acceptedAnswer": {"@type": "Answer", "text": "Try toggling Airplane Mode, restarting device, checking for outages, removing/reinserting SIM, or trying a different location. Contact O2 if issues persist."}}, {"@type": "Question", "name": "When am I eligible for a phone upgrade?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on contract: 24-month contracts eligible in final 3 months; O2 Refresh allows upgrade anytime once Device Plan is paid off. Check My O2 app or text UPGRADE to 61202."}}, {"@type": "Question", "name": "What is O2 Refresh and how does it work?", "acceptedAnswer": {"@type": "Answer", "text": "Splits monthly bill into Device Plan (phone cost over 24-36 months) and Airtime Plan (allowances). Benefits include transparent pricing, flexible upgrades, and automatic bill reduction when device is paid off."}}, {"@type": "Question", "name": "How do I get a PAC code to switch networks?", "acceptedAnswer": {"@type": "Answer", "text": "Text PAC to 65075, request through My O2 app/website, or call customer service. PAC code provided within 60 seconds and valid for 30 days."}}, {"@type": "Question", "name": "How do I cancel my O2 contract?", "acceptedAnswer": {"@type": "Answer", "text": "Give 30 days notice at end of contract (no fee), pay early termination charge for early cancellation, or cancel within 14-day cooling-off period for full refund."}}]}
     </script>
+    <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17998623481"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17998623481');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -246,12 +255,45 @@
                 <div class="footer-column"><h4>Contact</h4><ul><li>📞 <a href="tel:01202925102">01202 925102</a></li><li>✉️ <a href="mailto:support@02helpdesk.co.uk">support@02helpdesk.co.uk</a></li></ul></div>
             </div>
             <div class="footer-disclaimer"><p><strong>Disclaimer:</strong> O2 Helpdesk UK is an independent support service and is not affiliated with O2.</p></div>
-            <div class="footer-bottom"><p class="footer-copyright">© 2025 O2 Helpdesk UK. All rights reserved.</p></div>
+            <div class="footer-bottom"><p class="footer-copyright">© 2026 O2 Helpdesk UK. All rights reserved.</p></div>
         </div>
     </footer>
     
-    <div class="cookie-consent"><div class="cookie-container"><p class="cookie-text">We use cookies to improve your experience. <a href="/cookie-policy.html">Cookie Policy</a>.</p><button class="btn btn-primary cookie-accept">Accept</button></div></div>
+    <div id="cookie-consent-banner" class="cookie-consent" style="display:none;">
+        <div class="cookie-container" style="max-width:900px;margin:0 auto;padding:1.25rem;">
+            <p class="cookie-text" style="margin-bottom:0.75rem;"><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, serve personalised advertisements through Google AdSense, and analyse our traffic via Google Analytics. We also use Google Ads conversion tracking to measure the effectiveness of our advertising campaigns.</p>
+            <p class="cookie-text" style="margin-bottom:1rem;font-size:0.9rem;">By clicking "Accept All", you consent to the use of ALL cookies. You may choose "Essential Only" to reject non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="cookie-accept-all" style="padding:0.6rem 1.5rem;">Accept All</button>
+                <button class="btn" id="cookie-essential-only" style="padding:0.6rem 1.5rem;background:#e2e8f0;color:#1a202c;border:none;border-radius:6px;cursor:pointer;">Essential Only</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        var consent = localStorage.getItem("cookieConsent");
+        if (!consent) { document.getElementById("cookie-consent-banner").style.display = "block"; }
+        document.getElementById("cookie-accept-all").addEventListener("click", function() { localStorage.setItem("cookieConsent", "all"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+        document.getElementById("cookie-essential-only").addEventListener("click", function() { localStorage.setItem("cookieConsent", "essential"); document.getElementById("cookie-consent-banner").style.display = "none"; });
+    })();
+    </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+        <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17998623481/CoR0CO_x_oMcEPnltIZD',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>
