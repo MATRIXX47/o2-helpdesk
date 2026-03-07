@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expert O2 technical support helpdesk. Troubleshoot network issues, mobile data problems, WiFi calling, SIM card faults & device setup. Call 01202 925102 for immediate assistance.">
+    <link rel="canonical" href="https://02helpdesk.co.uk/o2-technical-support.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="O2 Technical Support | Expert Helpdesk & Troubleshooting | 01202 925102">
+    <meta property="og:description" content="Expert O2 technical support helpdesk. Troubleshoot network issues, mobile data problems, WiFi calling, SIM card faults & device setup. Call 01202 925102 for immediate assistance.">
+    <meta property="og:url" content="https://02helpdesk.co.uk/o2-technical-support.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="O2 Technical Support | Expert Helpdesk & Troubleshooting | 01202 925102">
+    <meta name="twitter:description" content="Expert O2 technical support helpdesk. Troubleshoot network issues, mobile data problems, WiFi calling, SIM card faults & device setup. Call 01202 925102 for immediate assistance.">
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Service", "name": "O2 Technical Support", "description": "Expert O2 technical support service for network issues, device troubleshooting, and connectivity problems.", "url": "https://02helpdesk.co.uk/o2-technical-support.html", "provider": {"@type": "Organization", "name": "O2 Helpdesk UK", "url": "https://02helpdesk.co.uk"}}
+    </script>
     <meta name="keywords" content="O2 technical support, O2 network issues, O2 mobile data problems, O2 WiFi calling, O2 SIM card help, O2 troubleshooting, O2 helpdesk UK">
     <title>O2 Technical Support | Expert Helpdesk & Troubleshooting | 01202 925102</title>
     <link rel="stylesheet" href="styles.css">
@@ -1113,5 +1124,33 @@
 </article>
 
     <script src="main.js"></script>
+
+    <div id="cookie-consent-banner" class="cookie-consent" style="display:none;">
+        <div class="cookie-container" style="max-width:900px;margin:0 auto;padding:1.25rem;">
+            <p class="cookie-text" style="margin-bottom:0.75rem;"><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, serve personalised advertisements through Google AdSense, and analyse our traffic via Google Analytics. We also use Google Ads conversion tracking to measure the effectiveness of our advertising campaigns.</p>
+            <p class="cookie-text" style="margin-bottom:1rem;font-size:0.9rem;">By clicking "Accept All", you consent to the use of ALL cookies. You may choose "Essential Only" to reject non-essential cookies. For more details, see our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="cookie-accept-all" style="padding:0.6rem 1.5rem;">Accept All</button>
+                <button class="btn" id="cookie-essential-only" style="padding:0.6rem 1.5rem;background:#e2e8f0;color:#1a202c;border:none;border-radius:6px;cursor:pointer;">Essential Only</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            document.getElementById('cookie-consent-banner').style.display = 'block';
+        }
+        document.getElementById('cookie-accept-all').addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'all');
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+        });
+        document.getElementById('cookie-essential-only').addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'essential');
+            document.getElementById('cookie-consent-banner').style.display = 'none';
+        });
+    })();
+    </script>
 </body>
 </html>
