@@ -90,11 +90,11 @@
                 
                 <div class="cta-box">
                     <h3>Our Impact</h3>
-                    <p>📊 <strong>15,000+</strong> customers helped</p>
-                    <p>⭐ <strong>4.9/5</strong> average customer rating</p>
-                    <p>⏱️ <strong>&lt;60 seconds</strong> average answer time</p>
-                    <p>💰 <strong>£2.3 million</strong> in customer savings and refunds secured</p>
-                    <p>📞 <strong>92%</strong> of issues resolved on first contact</p>
+                    <p>📊 Thousands of O2 customers helped since 2018</p>
+                    <p>⭐ Highly rated by our customers for fast, friendly service</p>
+                    <p>⏱️ Quick answer times — speak to a real person, not a machine</p>
+                    <p>💰 We've helped customers secure significant savings and refunds on overcharges</p>
+                    <p>📞 Most issues resolved on the first call — no callbacks, no runaround</p>
                 </div>
                 
                 <h2>Our Team</h2>
@@ -166,14 +166,24 @@
         </div>
     </footer>
     
-    <div class="cookie-consent">
-        <div class="cookie-container">
-            <p class="cookie-text">We use cookies to improve your experience. By continuing to use our site, you agree to our <a href="/cookie-policy.html">Cookie Policy</a>.</p>
-            <div class="cookie-buttons">
-                <button class="btn btn-primary cookie-accept">Accept</button>
+    <div id="cookie-consent-banner" class="cookie-consent" style="display:none;">
+        <div class="cookie-container" style="max-width:900px;margin:0 auto;padding:1.25rem;">
+            <p class="cookie-text" style="margin-bottom:0.75rem;"><strong>We value your privacy.</strong> We use cookies to enhance your browsing experience, serve personalised advertisements through Google AdSense, and analyse our traffic via Google Analytics. We also use Google Ads conversion tracking to measure the effectiveness of our advertising campaigns.</p>
+            <p class="cookie-text" style="margin-bottom:1rem;font-size:0.9rem;">By clicking "Accept All", you consent to the use of ALL cookies. You may choose "Essential Only" to reject non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a> and <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            <div class="cookie-buttons" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <button class="btn btn-primary" id="cookie-accept-all" style="padding:0.6rem 1.5rem;">Accept All</button>
+                <button class="btn" id="cookie-essential-only" style="padding:0.6rem 1.5rem;background:#e2e8f0;color:#1a202c;border:none;border-radius:6px;cursor:pointer;">Essential Only</button>
             </div>
         </div>
     </div>
+    <script>
+    (function() {
+        var consent = localStorage.getItem('cookieConsent');
+        if (!consent) { document.getElementById('cookie-consent-banner').style.display = 'block'; }
+        document.getElementById('cookie-accept-all').addEventListener('click', function() { localStorage.setItem('cookieConsent', 'all'); document.getElementById('cookie-consent-banner').style.display = 'none'; });
+        document.getElementById('cookie-essential-only').addEventListener('click', function() { localStorage.setItem('cookieConsent', 'essential'); document.getElementById('cookie-consent-banner').style.display = 'none'; });
+    })();
+    </script>
     
     <button class="back-to-top" aria-label="Back to top">↑</button>
     <script src="main.js"></script>
