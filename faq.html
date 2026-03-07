@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What services does the O2 Helpdesk provide?", "acceptedAnswer": {"@type": "Answer", "text": "Comprehensive support for O2 mobile services including account management, billing, technical troubleshooting, device upgrades, and customer service with personalised advice."}}, {"@type": "Question", "name": "How do I check my O2 account balance and allowances?", "acceptedAnswer": {"@type": "Answer", "text": "Check balance via My O2 app, dial *#10# from your phone, log into o2.co.uk/my-o2, or text BALANCE to 20202."}}, {"@type": "Question", "name": "Why is my O2 bill higher than usual?", "acceptedAnswer": {"@type": "Answer", "text": "Common causes include out-of-bundle charges, international roaming, premium rate calls, add-ons, or one-off fees. Check bill breakdown in My O2 app."}}, {"@type": "Question", "name": "Why do I have no signal or poor reception?", "acceptedAnswer": {"@type": "Answer", "text": "Try toggling Airplane Mode, restarting device, checking for outages, removing/reinserting SIM, or trying a different location. Contact O2 if issues persist."}}, {"@type": "Question", "name": "When am I eligible for a phone upgrade?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on contract: 24-month contracts eligible in final 3 months; O2 Refresh allows upgrade anytime once Device Plan is paid off. Check My O2 app or text UPGRADE to 61202."}}, {"@type": "Question", "name": "What is O2 Refresh and how does it work?", "acceptedAnswer": {"@type": "Answer", "text": "Splits monthly bill into Device Plan (phone cost over 24-36 months) and Airtime Plan (allowances). Benefits include transparent pricing, flexible upgrades, and automatic bill reduction when device is paid off."}}, {"@type": "Question", "name": "How do I get a PAC code to switch networks?", "acceptedAnswer": {"@type": "Answer", "text": "Text PAC to 65075, request through My O2 app/website, or call customer service. PAC code provided within 60 seconds and valid for 30 days."}}, {"@type": "Question", "name": "How do I cancel my O2 contract?", "acceptedAnswer": {"@type": "Answer", "text": "Give 30 days notice at end of contract (no fee), pay early termination charge for early cancellation, or cancel within 14-day cooling-off period for full refund."}}]}
     </script>
+    <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -269,6 +278,22 @@
     })();
     </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+        <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>

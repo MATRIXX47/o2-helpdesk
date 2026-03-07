@@ -21,6 +21,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Organization","name":"O2 Helpdesk UK","description":"Independent O2 customer support service","url":"https://02helpdesk.co.uk","telephone":"+441202925102","address":{"@type":"PostalAddress","addressLocality":"Bournemouth","addressRegion":"Dorset","postalCode":"BH1 1AA","addressCountry":"GB"},"contactPoint":{"@type":"ContactPoint","telephone":"+441202925102","contactType":"customer service","availableLanguage":"English"}}
     </script>
@@ -436,6 +446,24 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to top">↑</button>
     
+    <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        // Track all phone link clicks as Google Ads conversions
+        // Replace AW-XXXXXXXXXX/CALL_LABEL with your actual conversion ID and label
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <!-- Scripts -->
     <script src="main.js"></script>
 </body>

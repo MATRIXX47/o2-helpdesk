@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "CollectionPage", "name": "O2 Helpdesk Blog", "description": "Expert tips, guides, and news about O2 services.", "url": "https://02helpdesk.co.uk/blog/", "publisher": {"@type": "Organization", "name": "O2 Helpdesk UK"}}
     </script>
+        <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -209,6 +218,23 @@
     })();
     </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+    
+    <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="../main.js"></script>
 </body>
 </html>

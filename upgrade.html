@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "Service", "name": "O2 Upgrade Support", "description": "Expert O2 upgrade advice including eligibility checks, deal comparisons, and avoiding common pitfalls.", "url": "https://02helpdesk.co.uk/upgrade.html", "provider": {"@type": "Organization", "name": "O2 Helpdesk UK", "telephone": "+441202925102"}, "areaServed": {"@type": "Country", "name": "United Kingdom"}, "availableChannel": {"@type": "ServiceChannel", "servicePhone": {"@type": "ContactPoint", "telephone": "+441202925102"}}}
     </script>
+    <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -206,6 +215,22 @@
     })();
     </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+        <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>

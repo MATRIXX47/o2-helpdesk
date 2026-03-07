@@ -16,6 +16,15 @@
     <script type="application/ld+json">
     {"@context": "https://schema.org", "@type": "Article", "headline": "Is O2 Mobile Insurance Worth It? Complete Guide to O2 Device Insurance", "description": "A comprehensive guide to O2 mobile insurance covering what's included, excess fees, how to claim, third-party alternatives, and whether it's worth the cost.", "url": "https://02helpdesk.co.uk/blog/o2-mobile-insurance-guide.html", "datePublished": "2026-03-07", "dateModified": "2026-03-07", "author": {"@type": "Organization", "name": "O2 Helpdesk UK"}, "publisher": {"@type": "Organization", "name": "O2 Helpdesk UK", "url": "https://02helpdesk.co.uk"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://02helpdesk.co.uk/blog/o2-mobile-insurance-guide.html"}}
     </script>
+        <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -349,6 +358,23 @@
     })();
     </script>
     <button class="back-to-top" aria-label="Back to top">↑</button>
+    
+    <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
+
     <script src="../main.js"></script>
 </body>
 </html>

@@ -17,6 +17,15 @@
     {"@context": "https://schema.org", "@type": "Service", "name": "O2 Billing Support", "description": "Expert O2 billing support service helping customers with bill disputes, payment issues, and billing queries.", "url": "https://02helpdesk.co.uk/o2-billing-support.html", "provider": {"@type": "Organization", "name": "O2 Helpdesk UK", "url": "https://02helpdesk.co.uk"}}
     </script>
     <meta name="keywords" content="O2 billing support, O2 bill help, O2 charges dispute, O2 direct debit, O2 roaming charges, O2 spending cap">
+    <!-- Google Ads Conversion Tracking (replace AW-XXXXXXXXXX with your Google Ads ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -1108,6 +1117,22 @@
 <p><em>Remember: The sooner you address a billing issue, the easier it is to resolve. Don't let small problems become big headaches—call us today and get your O2 bill sorted.</em></p>
 
 </main>
+
+    <!-- Google Ads Call Conversion Tracking -->
+    <script>
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href^="tel:"]');
+            if (link && typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-XXXXXXXXXX/CALL_CONVERSION_LABEL',
+                    'value': 1.0,
+                    'currency': 'GBP'
+                });
+            }
+        });
+    })();
+    </script>
 
     <script src="main.js"></script>
 
